@@ -45,33 +45,33 @@ window.addEventListener('scroll', shadowHeader);
 
 /*=============== EMAIL JS ===============*/
 
-const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-message');
+// const contactForm = document.getElementById('contact-form'),
+//       contactMessage = document.getElementById('contact-message');
 
-const sendEmail = (e) => {
-    e.preventDefault();
+// const sendEmail = (e) => {
+//     e.preventDefault();
 
-    // servideID - templateID - #form - publickey
-    emailjs.sendForm('','','#contact-form','')
-    .then(() => {
-        // Show sent message
-        contactMessage.textContent = 'Message sent successfully ✅';
+//     // servideID - templateID - #form - publickey
+//     emailjs.sendForm('','','#contact-form','')
+//     .then(() => {
+//         // Show sent message
+//         contactMessage.textContent = 'Message sent successfully ✅';
 
-        // Remove message after 5 seconds
-        setTimeout(() => {
-            contactMessage.textContent = '';
-        }, 5000);
+//         // Remove message after 5 seconds
+//         setTimeout(() => {
+//             contactMessage.textContent = '';
+//         }, 5000);
 
-        // Clear input fields
-        contactForm.reset();
+//         // Clear input fields
+//         contactForm.reset();
 
-    }, () => {
-        // Show error message
-        contactMessage.textContent = 'Message not sent (service error) ❌';
-    })
-}
+//     }, () => {
+//         // Show error message
+//         contactMessage.textContent = 'Message not sent (service error) ❌';
+//     })
+// }
 
-contactForm.addEventListener('submit', sendEmail);
+// contactForm.addEventListener('submit', sendEmail);
 
 /*=============== SCROLL UP ===============*/
 
